@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --height: 70px;
+    --green: #52DE8A;
+    --black: #333;
+    --heading: Montserrat;
+    --text: Roboto;
+    --nav-bg: #eee;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+
+    padding: 0 15px;
+    height: var(--height);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: var(--nav-bg);
+    font-family: Segoe UI;
+    font-size: 17px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+nav a.active::after {
+    content: "";
+    display: block;
+    background: var(--green);
+    height: 3px;
+    width: 100%;
+
+}
+
+.home {
+    background: url("./images/freestocks_org_126848_unsplash_A0_Rectangle_4_pattern@2x.png") rgba(3, 3, 3, 0.5);
+    height: calc(100vh - var(--height));
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: var(--height);
+}
+
+main {
+    padding-top: var(--height);
+}
+
+h1 {
+    font-family: var(--heading);
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--green);
+    margin: 1rem 0.5rem;
+}
+
+.home h1 {
+    color: var(--nav-bg);
+}
+
+.about {
+    height: 100vh;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 90vw;
+    min-height: 50vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about .content h1 {
+    color: var(--green);
+    grid-column: 1/2;
+}
+
+p {
+    text-align: center;
+    font: 300 1.1rem var(--text);
+}
+
+.about .rightMark {
+    grid-column: 2/3;
+    order: -1;
+
+}
+
+
+.payments {
+    width: 100vw;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.payments p {
+    font-family: var(--text);
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.payments .images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+img {
+    max-height: 400px;
+    margin-top: 1rem;
+}
+
+@media (max-width:466px) {
+    img {
+        height: auto;
+        width: 90%;
+    }
+}
+
+figcaption {
+    font: 500 1.1rem Lato;
+    margin: 0.6rem 0;
+}
+
+.contact {
+    min-height: 70vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact form {
+    align-self: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+form label {
+    font: 400 1rem var(--text);
+    display: block;
+    margin-bottom: 10px;
+}
+
+form div {
+    background-color: beige;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 216px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font: bold 1rem var(--text);
+    border-radius: 500px;
+}
+
+form button {
+    margin-top: 15px;
+    height: 40px;
+    width: 216px;
+    border: none;
+    border-radius: 500px;
+    color: #eee;
+    background-color: var(--green);
+    font: bold 1rem var(--heading);
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.95);
+}
