@@ -70,7 +70,7 @@ nav a.active::after {
 }
 
 .home {
-    background: url("./images/freestocks_org_126848_unsplash_A0_Rectangle_4_pattern@2x.png") rgba(3, 3, 3, 0.5);
+    background: url("./images/freestocks_org_126848_unsplash_A0_Rectangle_4_pattern@2x-compressor.png") rgba(3, 3, 3, 0.5);
     height: calc(100vh - var(--height));
     background-blend-mode: multiply;
     background-size: cover;
